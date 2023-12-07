@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #cursor {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #coordinates {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="cursor"></div> -->
+  <div id="coordinates">Coordinates: <span id="x">0</span>, <span id="y">0</span></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cursor = document.getElementById("cursor");
+      const coordinatesX = document.getElementById("x");
+      const coordinatesY = document.getElementById("y");
+
+      document.addEventListener("mousemove", function (event) {
+        const x = event.clientX;
+        const y = event.clientY;
+
+        // cursor.style.transform = `translate(${x - 10}px, ${y - 10}px)`; // Adjust for cursor size
+
+        coordinatesX.textContent = x;
+        coordinatesY.textContent = y;
+      });
+    });
+  </script>
+</body>
+</html>
