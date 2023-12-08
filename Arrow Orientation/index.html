@@ -3,53 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Awareness</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #f0f0f0;
     }
 
-    #cursor {
+    #arrow {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #333;
-      border-radius: 50%;
-      pointer-events: none;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
     }
 
-    #coordinates {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      font-family: Arial, sans-serif;
+    #arrow-left {
+      border-bottom: 30px solid red;
+    }
+
+    #arrow-right {
+      border-bottom: 30px solid blue;
+      transform: rotate(180deg);
     }
   </style>
 </head>
 <body>
-  <!-- <div id="cursor"></div> -->
-  <div id="coordinates">Coordinates: <span id="x">0</span>, <span id="y">0</span></div>
+  <div id="arrow">
+    <div id="arrow-left"></div>
+    <div id="arrow-right"></div>
+  </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cursor = document.getElementById("cursor");
-      const coordinatesX = document.getElementById("x");
-      const coordinatesY = document.getElementById("y");
+    document.addEventListener('DOMContentLoaded', () => {
+      const arrow = document.getElementById('arrow');
 
-      document.addEventListener("mousemove", function (event) {
-        const x = event.clientX;
-        const y = event.clientY;
+      function updateArrows() {
+        const windows = JSON.parse(localStorage.getItem('windows')) || [];
+        const currentIndex = windows.indexOf(window.name);
 
-        // cursor.style.transform = `translate(${x - 10}px, ${y - 10}px)`; // Adjust for cursor size
+        if (currentIndex !== -1) {
+          const otherWindows = [...windows.slice(0, currentIndex), ...windows.slice(currentIndex + 1)];
 
-        coordinatesX.textContent = x;
-        coordinatesY.textContent = y;
-      });
+          otherWindows.forEach((otherWindowName) => {
+            const otherWindow = window.open('', otherWindowName);
+
+            if (otherWindow) {
+              const thisPosition = { x: window.screenX, y: window.screenY };
+              const otherPosition = { x: otherWindow.screenX, y: otherWindow.screenY };
+
+              const angle = Math.atan2(otherPosition.y - thisPosition.y, otherPosition.x - thisPosition.x);
+              const angleDeg = angle * (180 / Math.PI);
+
+              arrow.style.transform = `translate(${thisPosition.x}px, ${thisPosition.y}px) rotate(${angleDeg}deg)`;
+            }
+          });
+        }
+      }
+
+      // Store window name in localStorage and update arrows on load
+      if (!window.name) {
+        window.name = Math.random().toString(36).substr(2, 5);
+        const windows = JSON.parse(localStorage.getItem('windows')) || [];
+        windows.push(window.name);
+        localStorage.setItem('windows', JSON.stringify(windows));
+      }
+
+      updateArrows();
     });
   </script>
 </body>
