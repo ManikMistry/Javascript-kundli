@@ -24,3 +24,4 @@ Fruit2.name="bananna"
 console.log(Fruit)
 console.log(Fruit2);
 
+// 12 DEC 
