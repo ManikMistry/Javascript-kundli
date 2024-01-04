@@ -10,4 +10,6 @@ const promise=new Promise((resolve,reject)=>{
 }).catch((rejValue)=>{
     console.log(rejValue)
     console.log("Ok! I preapre pasta now")
+}).finally(()=>{
+    console.log("Everything is ready! please come to the dinning");
 })
