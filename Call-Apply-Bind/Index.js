@@ -53,3 +53,40 @@ let obj1 = {
   const result4 = Desc.bind(obj4, "Facebook", "Menlo Park");
   console.log(result4());
   
+
+// Best Way to do this
+
+// let objects = [
+//     {
+//       name: "Manik",
+//       from: "Odisha",
+//       designation: "MERN Stack Developer",
+//     },
+//     {
+//       name: "Arun",
+//       from: "West Bengal",
+//       designation: "React Developer",
+//     },
+//     {
+//       name: "Subash",
+//       from: "Noida",
+//       designation: "Full Stack Developer",
+//     },
+//     {
+//       name: "Jyoti",
+//       from: "Pune",
+//       designation: "React Native Developer",
+//     },
+//   ];
+  
+//   function Desc(company, location) {
+//     return `I am ${this.name} from ${this.from} and I'm working as a ${this.designation} at ${company}, ${location}`;
+//   }
+  
+//   let boundFunctions = objects.map((obj) => Desc.bind(obj));
+  
+//   boundFunctions.forEach((fn, index) => {
+//     console.log(`Result for object ${index + 1}:`);
+//     console.log(fn("Company", "Location"));
+//   });
+  
