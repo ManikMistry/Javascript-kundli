@@ -14,12 +14,42 @@ console.log(result);
 
 // Bind
 let obj1 = {
-  name: "Manik",
-  from: "Odisha",
-  designation: "MERN Stack Developer",
-};
-function Desc(company, location) {
-  return `I am ${this.name} from ${this.from} and I wroking as a ${this.designation} at ${company},${location}`;
-}
-const result1 = Desc.bind(obj1, "IBM", "Hyderabad");
-console.log(result1());
+    name: "Manik",
+    from: "Odisha",
+    designation: "MERN Stack Developer",
+  };
+  
+  let obj2 = {
+    name: "Arun",
+    from: "West Bengal",
+    designation: "React Developer",
+  };
+  
+  let obj3 = {
+    name: "Subash",
+    from: "Noida",
+    designation: "Full Stack Developer",
+  };
+  
+  let obj4 = {
+    name: "Jyoti",
+    from: "Pune",
+    designation: "React Native Developer",
+  };
+  
+  function Desc(company, location) {
+    return `I am ${this.name} from ${this.from} and I'm working as a ${this.designation} at ${company}, ${location}`;
+  }
+  
+  const result1 = Desc.bind(obj1, "IBM", "Hyderabad");
+  console.log(result1());
+  
+  const result2 = Desc.bind(obj2, "Google", "Bangalore");
+  console.log(result2());
+  
+  const result3 = Desc.bind(obj3, "Microsoft", "Seattle");
+  console.log(result3());
+  
+  const result4 = Desc.bind(obj4, "Facebook", "Menlo Park");
+  console.log(result4());
+  
