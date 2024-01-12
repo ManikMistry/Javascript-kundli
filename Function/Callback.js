@@ -1,6 +1,4 @@
 // Call Bcak function
-
-
 function IamCallBack(){
     console.log("Thanks for called me back!")
 }
