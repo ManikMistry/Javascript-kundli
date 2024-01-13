@@ -19,7 +19,18 @@ ArrowFunction();
     name="Hari";
     age=23;
     console.log(name,age,address);
+
+
 // Template literals
+
+console.log(`My name is ${obj.name} and Iam ${obj.age}years old`);
+//   multistring template literals
+console.log(`
+name: ${obj.name}
+age: ${obj.age}
+address: ${address}
+`)
+
 // Default parameters
 // Classes
 // Promises
