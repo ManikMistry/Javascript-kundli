@@ -4,6 +4,13 @@ const ArrowFunction=()=>{
 }
 ArrowFunction();
 // Destructuring
+    //  Array 
+    const arr=[1,2,3,4,5,6];
+
+    const[a,b,c,...d]=arr;
+    console.log(a,b,c);
+    console.log(d)
+    //  Object destructuring
 // Template literals
 // Default parameters
 // Classes
