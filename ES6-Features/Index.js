@@ -11,6 +11,14 @@ ArrowFunction();
     console.log(a,b,c);
     console.log(d)
     //  Object destructuring
+    let obj={
+        name:"manik",
+        age:20
+    }
+    let {name,age,address="BBSR"}=obj;
+    name="Hari";
+    age=23;
+    console.log(name,age,address);
 // Template literals
 // Default parameters
 // Classes
