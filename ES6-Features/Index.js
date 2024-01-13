@@ -32,6 +32,11 @@ address: ${address}
 `)
 
 // Default parameters
+function DefaultParam(a=20,b=20){
+    console.log(a+b);
+}
+DefaultParam();
+
 // Classes
 // Promises
 // Let and const
