@@ -39,6 +39,23 @@ DefaultParam();
 
 // Classes
 // Promises
+console.log("Have you get the taccos?");
+
+const promise=new Promise((res,rej)=>{
+    setTimeout(()=>{
+        const isTaccosAvailable=true;
+        if(isTaccosAvailable){
+            res("yes I got the taccos.");
+        }else{
+            rej("No I didn't get the taccos.")
+        }
+    },3000)
+})
+promise.then((resValue)=>{
+    console.log(resValue,"Ok I ready dinning for the dinner.");
+}).catch((rejValue)=>{
+    console.log(rejValue,"Ok then I prepare pasta instead.");
+})
 // Let and const
 // Modules
 // Rest parameters
