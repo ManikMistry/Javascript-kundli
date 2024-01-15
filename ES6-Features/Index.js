@@ -57,6 +57,16 @@ promise.then((resValue)=>{
     console.log(rejValue,"Ok then I prepare pasta instead.");
 })
 // Let and const
+let abc=20;
+console.log(abc);
+abc=30;
+console.log(abc);
+
+const bac=20;
+console.log(bac);
+bac=30;
+// console.log(bac);
+
 // Modules
 // Rest parameters
 // Object literals
