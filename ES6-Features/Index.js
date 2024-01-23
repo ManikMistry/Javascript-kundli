@@ -71,6 +71,7 @@ bac=30;
 // Rest parameters
 // Object literals
 // Arrays
+let arr=[1,2,3,4,5]
 // Spread operator
 // String
 // Multiple line string
