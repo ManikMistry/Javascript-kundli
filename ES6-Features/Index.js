@@ -81,6 +81,12 @@ I have completed my graduation from NIIS.
 I am from odisha Bhubaneswar
 `)
 // Arrays
+/* Array is a non-primitve data types is can hold multiple data in a single memory location...array can store any data inside it like
+number, string, boolean, null, undefined, symbol, object
+*/
+let Array=[1,"one",null,undefined,true,{name:"manik"}];
+console.log(Array[1]="two");
+console.log(Array);
 // let arr=[1,2,3,4,5]
 // Spread operator
 // String
