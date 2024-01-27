@@ -87,8 +87,14 @@ number, string, boolean, null, undefined, symbol, object
 let Array=[1,"one",null,undefined,true,{name:"manik"}];
 console.log(Array[1]="two");
 console.log(Array);
-// let arr=[1,2,3,4,5]
 // Spread operator
+const Spread=[1,2,3,4,5,6,7,8,9,10];
+const SpreadArr=[...Spread];
+console.log(SpreadArr);
+
+const SpreadObjItem={name:"manik",age:23};
+const SpreadObj={...SpreadObjItem};
+console.log(SpreadObj.age=22);
 // String
 // Multiple line string
 // Symbols
