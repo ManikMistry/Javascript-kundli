@@ -64,14 +64,20 @@ console.log(abc);
 
 const bac=20;
 console.log(bac);
-bac=30;
+// bac=30;
 // console.log(bac);
 
 // Modules
 // Rest parameters
+function restOperator([a,b,...c]){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+restOperator([1,2,3,4,5,6,7,8]);
 // Object literals
 // Arrays
-let arr=[1,2,3,4,5]
+// let arr=[1,2,3,4,5]
 // Spread operator
 // String
 // Multiple line string
