@@ -76,6 +76,10 @@ function restOperator([a,b,...c]){
 }
 restOperator([1,2,3,4,5,6,7,8]);
 // Object literals
+console.log(`my name is manik and iam ${abc} years old
+I have completed my graduation from NIIS.
+I am from odisha Bhubaneswar
+`)
 // Arrays
 // let arr=[1,2,3,4,5]
 // Spread operator
