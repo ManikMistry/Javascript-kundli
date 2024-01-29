@@ -95,10 +95,15 @@ console.log(SpreadArr);
 const SpreadObjItem={name:"manik",age:23};
 const SpreadObj={...SpreadObjItem};
 console.log(SpreadObj.age=22);
-// String
-// Multiple line string
-// Symbols
 // Block-scoped variables
+// let and const are blocked scope varible 
+function BlockedScope(){
+    let a1=10;
+    const b2=20;
+    console.log(a1+b2);
+}
+BlockedScope();
+console.log(a1,b2);
 // For...of loop
 // Generators
 // Iterators
