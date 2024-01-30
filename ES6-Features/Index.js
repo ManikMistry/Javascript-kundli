@@ -103,12 +103,17 @@ function BlockedScope(){
     console.log(a1+b2);
 }
 BlockedScope();
-console.log(a1,b2);
+// console.log(a1,b2);
 // For...of loop
 // Generators
 // Iterators
 // Objects
 // Rest operators
+function restOperator(...arr){
+    return arr.map((e)=>e+2);
+    
+}
+console.log(restOperator([1,2,3,4,5,6]));
 // Const and let keywords
 // Let
 // Maps
