@@ -114,6 +114,4 @@ function restOperator(...arr){
     
 }
 console.log(restOperator([1,2,3,4,5,6]));
-// Const and let keywords
-// Let
 // Maps
