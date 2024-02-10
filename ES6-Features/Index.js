@@ -105,6 +105,10 @@ function BlockedScope(){
 BlockedScope();
 // console.log(a1,b2);
 // For...of loop
+const forOf=[1,2,3,4,5,6];
+for(i of forOf){
+    console.log(i);
+}
 // Generators
 // Iterators
 // Objects
