@@ -110,6 +110,12 @@ for(i of forOf){
     console.log(i);
 }
 // Generators
+function* Generators(){
+    yield 1;
+    yield 2;
+}
+const res=Generators();
+console.log(res.next().value);
 // Iterators
 // Objects
 // Rest operators
