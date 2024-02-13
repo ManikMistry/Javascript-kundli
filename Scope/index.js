@@ -18,7 +18,7 @@
 // console.log(x+y);
 
 // Lexical scope
-let name="manik"
+let name="Iam lexical scope variable"
 function print(){
     console.log(name);
 }
